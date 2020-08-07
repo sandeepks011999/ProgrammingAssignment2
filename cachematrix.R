@@ -1,3 +1,4 @@
+## This function creates a special "matrix" object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
 m<-NULL   
 evn <- environment()  
@@ -19,6 +20,7 @@ getenv = getenv)
 
 }
 
+## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
 cacheSolve <- function(xMat= m(), ...) {
 	
 	m <- xMat$getinverse() 
